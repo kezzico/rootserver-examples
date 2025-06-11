@@ -29,11 +29,6 @@ $KEYWORDS = "root server, coming soon, product launch";
         <section>
             <h1>Thank you for signing up!</h1>
             <p>You're on the list for updates.</p>
-
-            <FORM method="POST" action="/v1/otp">
-                <input type="email" name="email" placeholder="Enter your email" />
-                <input type="submit" value="Submit" />
-            </FORM>
         </section>
     </main>
 
