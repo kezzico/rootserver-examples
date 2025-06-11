@@ -24,6 +24,11 @@ To setup email functionality, install mailutils on your server. Do this by runni
 sudo apt-get install mailutils
 ```
 
+
+Set the value of `NO_REPLY_EMAIL_ADDRESS` in prod.env and sandbox.env to match the domain name of your server.
+
+*Optional* Add an spf record to the domain name pointing at the VPS's IP address.
+
 **JWT**
 
 JWT authentication is used by the API. To generate a JWT secret, run the following command:
