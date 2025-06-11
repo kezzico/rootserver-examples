@@ -30,7 +30,7 @@ $KEYWORDS = "root server, coming soon, product launch, email signup";
             <h1>Great Product Coming Soon!</h1>
             <p>Enter your email address to learn more.</p>
 
-            <FORM method="POST" action="/v1/otp">
+            <FORM method="POST" action="/v1/signup">
                 <input type="email" name="email" placeholder="Enter your email" />
                 <input type="submit" value="Submit" />
             </FORM>
