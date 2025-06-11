@@ -1,0 +1,23 @@
+{
+  "name": "dogcity.social",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "author": "KEZZI.CO",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1",
+    "node-cron": "^4.1.0",
+    "nodemailer": "^7.0.3"
+  }
+}

@@ -1,0 +1,60 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "deploy --www",
+            "type": "shell",
+            "command": "./www/deploy-www.sh",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "deploy --prod",
+            "type": "shell",
+            "command": "./express/deploy-prod.sh",
+            "group": "build"
+        },
+        {
+            "label": "debug --sandbox",
+            "type": "shell",
+            "command": "./express/debug-sandbox.sh",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "deploy --sandbox",
+            "type": "shell",
+            "command": "./express/deploy-sandbox.sh",
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Connect to MySQL --sandbox",
+            "type": "shell",
+            "command": "./express/connect-to-database.sh sandbox.env",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Connect to MySQL --prod",
+            "type": "shell",
+            "command": "./express/connect-to-database.sh prod.env",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
