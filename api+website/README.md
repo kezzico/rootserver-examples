@@ -36,22 +36,30 @@ This will generate a random 32-byte secret that can be used by the application. 
 
 **MySQL**
 
-To set up the MySQL database, you need to create a database and user. You can do this by running the following commands in your MySQL shell:
-
-
-
-```bash
+To connect with MySQL console, set the value for HOST and KEYPATH in scripts.env. For security sake, the template assumes user connections to MySQL are made via SSH tunnel.
 
 <!-- Check out the [Root Server Documentation](https://rootserver.kezzi.co/docs) for more information. -->
 
 ## BUILD TASKS
 
-The following VS Code tasks are available for building and deploying your application (see .vscode/tasks.json):
+The following build tasks are available in Visual Studio Code:
 
-- **deploy --www**: Deploys static HTML to the web server using `./www/deploy-www.sh`.
-- **deploy --prod**: Deploys the Express backend in production mode using `./express/deploy-prod.sh`.
-- **debug --sandbox**: Runs the Express backend in sandbox debug mode using `./express/debug-sandbox.sh`.
-- **deploy --sandbox**: Deploys the Express backend in sandbox mode using `./express/deploy-sandbox.sh`.
-- **Connect to MySQL --sandbox**: Connects to the MySQL database using the sandbox environment via `./express/connect-to-database.sh sandbox.env`.
-- **Connect to MySQL --prod**: Connects to the MySQL database using the production environment via `./express/connect-to-database.sh prod.env`.
+- **deploy html+php to web server**  
+  Deploys the HTML and PHP website files to the web server by running `./www/deploy-www.sh`.
+
+- **deploy express application to production**  
+  Deploys the Express backend application to the production environment using `./express/deploy-prod.sh`.
+
+- **debug express application in sandbox**  
+  Starts the Express application in sandbox mode for debugging with `./express/debug-sandbox.sh`.
+
+- **deploy express code to sandbox environment**  
+  Deploys the Express backend application to the sandbox (test) environment using `./express/deploy-sandbox.sh`.
+
+- **Connect to sandbox MySQL database**  
+  Connects to the sandbox MySQL database using the sandbox environment configuration via `./express/connect-to-database.sh sandbox.env`.
+
+- **Connect to production MySQL database**  
+  Connects to the production MySQL database using the production environment configuration via `./express/connect-to-database.sh prod.env`.
+
 
