@@ -167,3 +167,24 @@ router.post('/profile', authorize, async (req, res) => {
 
 
 export default router;
+
+
+/** 
+ * Tables used by this API:
+
+ CREATE TABLE signups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE logins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    otp VARCHAR(6) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    login_at DATETIME DEFAULT NULL,
+    INDEX idx_email (email)
+);
+
+ */

@@ -4,20 +4,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "deploy --www",
+            "label": "deploy html+php to web server",
             "type": "shell",
             "command": "./www/deploy-www.sh",
             "group": "build",
             "problemMatcher": []
         },
         {
-            "label": "deploy --prod",
+            "label": "deploy express application to production",
             "type": "shell",
             "command": "./express/deploy-prod.sh",
             "group": "build"
         },
         {
-            "label": "debug --sandbox",
+            "label": "debug express application in sandbox",
             "type": "shell",
             "command": "./express/debug-sandbox.sh",
             "group": {
@@ -26,7 +26,7 @@
             "problemMatcher": []
         },
         {
-            "label": "deploy --sandbox",
+            "label": "deploy express code to sandbox environment",
             "type": "shell",
             "command": "./express/deploy-sandbox.sh",
             "presentation": {
@@ -39,7 +39,7 @@
             "problemMatcher": []
         },
         {
-            "label": "Connect to MySQL --sandbox",
+            "label": "Connect to sandbox MySQL database",
             "type": "shell",
             "command": "./express/connect-to-database.sh sandbox.env",
             "group": {
@@ -48,7 +48,7 @@
             "problemMatcher": []
         },
         {
-            "label": "Connect to MySQL --prod",
+            "label": "Connect to production MySQL database",
             "type": "shell",
             "command": "./express/connect-to-database.sh prod.env",
             "group": {
